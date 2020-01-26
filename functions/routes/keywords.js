@@ -28,79 +28,197 @@ function getUrl(message, callback) {
     const mood_booster =  message.includes('boost') || message.includes('kill me') ||  message.includes('overwhelmed') || message.includes('burn') ||message.includes('hate') || message.includes('mood_booster') || message.includes('day to be over') || message.includes('day to die') || message.includes('feel better') || message.includes('pick m') || message.includes('improve') || message.includes('get better') || message.includes('down');
 
     if (message.includes('want') && sad && negative) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/mood_booster');
+        return callback(null, {
+            quote : getEmotion("mood_booster"),
+            url : 'https://project-braveheart.azurewebsites.net/player/mood_booster'
+    });
     } else if (message.includes('want') && sad) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sad');
-    }
+        return callback(null, {
+            quote : getEmotion("sad"),
+            url : 'https://project-braveheart.azurewebsites.net/player/sad'
+    });
 
     if (negative && happy) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/happy');
+        return callback(null, {
+            quote: getEmotion("happy"),
+        url : 'https://project-braveheart.azurewebsites.net/player/happy'
+    });
     } else if (happy) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/happy');
-    }
+        return callback(null, {
+            quote : getEmotion("happy"),
+            url : 'https://project-braveheart.azurewebsites.net/player/happy'
+    });
     
     if (negative && sad) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/happy');
+        return callback(null, {
+            quote: getEmotion("happy"),
+            url: 'https://project-braveheart.azurewebsites.net/player/happy'
+        });
     } else if (sad) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/happy');
+        return callback(null, {
+            quote: getEmotion("happy"),
+            url: 'https://project-braveheart.azurewebsites.net/player/happy'
+        });
     }
-
     if (negative && love) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sad');
+        return callback(null, {
+            quote: getEmotion("sad"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sad'
+        });
     } else if (love) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/love');
+        return callback(null, {
+            quote: getEmotion("love"),
+            url: 'https://project-braveheart.azurewebsites.net/player/love'
+        });
     } 
 
     if (negative && relax) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/motivation');
+        return callback(null, {
+            quote: getEmotion("motivation"),
+            url: 'https://project-braveheart.azurewebsites.net/player/motivation'
+        });
     } else if (relax) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/relax');
+        return callback(null, {
+            quote: getEmotion("relax"),
+            url: 'https://project-braveheart.azurewebsites.net/player/relax'
+        });
     }
 
     if (negative && party) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/relax');
+        return callback(null, {
+            quote: getEmotion("relax"),
+            url: 'https://project-braveheart.azurewebsites.net/player/relax'
+        });
     } else if (party) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/party');
+        return callback(null, {
+            quote: getEmotion("party"),
+            url: 'https://project-braveheart.azurewebsites.net/player/party'
+        });
     } 
 
     if (negative && motivation) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/relax');
+        return callback(null, {
+            quote: getEmotion("relax"),
+            url: 'https://project-braveheart.azurewebsites.net/player/relax'
+        });
     }else if (motivation) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/motivation');
+        return callback(null, {
+            quote: getEmotion("motivation"),
+            url: 'https://project-braveheart.azurewebsites.net/player/motivation'
+        });
     } 
 
     if (negative && sleep) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sleep');
+        return callback(null, {
+            quote: getEmotion("sleep"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sleep'
+        });
     } else if (sleep) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sleep');
+        return callback(null, {
+            quote: getEmotion("sleep"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sleep'
+        });
     } 
 
     if (negative && study) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/party');
+        return callback(null, {
+            quote: getEmotion("party"),
+            url: 'https://project-braveheart.azurewebsites.net/player/party'
+        });
     } else if (study) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/study');
+        return callback(null, {
+            quote: getEmotion("study"),
+            url: 'https://project-braveheart.azurewebsites.net/player/study'
+        });
     } 
 
     if (negative && mood_booster) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sad');
+        return callback(null, {
+            quote: getEmotion("sad"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sad'
+        });
     } else if (mood_booster) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/mood_booster');
+        return callback(null, {
+            quote: getEmotion("mood_booster"),
+            url: 'https://project-braveheart.azurewebsites.net/player/mood_booster'
+        });
     }
  
     if (negative && mood_booster) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/sad');
+        return callback(null, {
+            quote: getEmotion("sad"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sad'
+        });
     } 
     else if (mood_booster) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/mood_booster');
+        return callback(null, {
+            quote: getEmotion("mood_booster"),
+            url: 'https://project-braveheart.azurewebsites.net/player/mood_booster'
+        });
     }
 
     if (negative && mad) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/relax');
+        return callback(null, {
+            quote: getEmotion("relax"),
+            url: 'https://project-braveheart.azurewebsites.net/player/relax'
+        });
     } else if (mad) {
-        return callback(null, 'https://project-braveheart.azurewebsites.net/player/mad');
+        return callback(null, {
+            quote: getEmotion("mad"),
+            url: 'https://project-braveheart.azurewebsites.net/player/mad'
+        });
     }
 
-    return callback(null, 'https://project-braveheart.azurewebsites.net/player/happy', false);
+    return callback(null, {
+        quote: "Hmmmm... That's interesting. Try this!",
+        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    }, false); //get Rick Roll'd
+}
+
+function getEmotion(e)
+{
+    switch (e) {
+        case
+        "happy"
+        :
+            return "Here's something you'll vibe to!";
+        case
+        "sad"
+        :
+            return "Here's a playlist you might feel like listening to.";
+        case
+        "mad"
+        :
+            return "Here's a playlist to get the blood pumping.";
+        case
+        "love"
+        :
+            return "Here's a lovely playlist for you.";
+        case
+        "relax"
+        :
+            return "Here's a laid back playlist.";
+        case
+        "party"
+        :
+            return "Here's a little something that will pump you up!";
+        case
+        "motivation"
+        :
+            return "Here's something that will get you going!";
+        case
+        "sleep"
+        :
+            return "Here's something that will soothe you.";
+        case
+        "study"
+        :
+            return "Here's something to get in the zone!";
+        case
+        "mood_booster"
+        :
+            return "Here's something to cheer you up!";
+    }
 }
 
 exports.handler = (req, res) => {

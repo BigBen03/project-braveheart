@@ -53,7 +53,7 @@ express.use('/',  async ({body}, res, next) => {
                 await ( async () => {//its dum but only for eslint to shut up
                     const result = JSON.parse(await request(`https://us-central1-braveheart-265cb.cloudfunctions.net/keywords/?message=${text}`))
                     await smooch.appUsers.sendMessage(body.appUser._id, {
-                        text: result.isDefined || isThanks ? 'Here\'s a playlist you might feel like listening to!' : 'Sorry, I did not understand what you meant. So here\'s our pick!',
+                        text: result.isDefined || isThanks ? result.quote : 'Sorry, I did not understand what you meant. So here\'s our pick!',
                         role: 'appMaker',
                         type: 'text',
                         actions: [
