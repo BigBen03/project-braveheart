@@ -46,9 +46,10 @@ function getUrl(message, callback) {
     });
     } else if (happy) {
         return callback(null, {
-            quote : getEmotion("happy"),
-            url : 'https://project-braveheart.azurewebsites.net/player/happy'
-    });
+            quote: getEmotion("happy"),
+            url: 'https://project-braveheart.azurewebsites.net/player/happy'
+        });
+    }
     
     if (negative && sad) {
         return callback(null, {
