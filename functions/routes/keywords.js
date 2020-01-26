@@ -29,14 +29,15 @@ function getUrl(message, callback) {
 
     if (message.includes('want') && sad && negative) {
         return callback(null, {
-            quote : getEmotion("mood_booster"),
-            url : 'https://project-braveheart.azurewebsites.net/player/mood_booster'
-    });
+            quote: getEmotion("mood_booster"),
+            url: 'https://project-braveheart.azurewebsites.net/player/mood_booster'
+        });
     } else if (message.includes('want') && sad) {
         return callback(null, {
-            quote : getEmotion("sad"),
-            url : 'https://project-braveheart.azurewebsites.net/player/sad'
-    });
+            quote: getEmotion("sad"),
+            url: 'https://project-braveheart.azurewebsites.net/player/sad'
+        });
+    }
 
     if (negative && happy) {
         return callback(null, {
